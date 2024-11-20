@@ -134,7 +134,9 @@ const algoliaCommand = async(hexo, args, callback) => {
   const algoliaChunkSize = algoliaConfig.chunkSize || 5000
 
   await hexo.call('generate')
-  await hexo.database.load()
+  
+  // 用于解决 https://github.com/LouisBarranqueiro/hexo-algoliasearch/issues/173
+  // await hexo.database.load() 
 
   let posts = hexo.database.model('Post').find({published: true}).sort('date', 'asc').toArray()
 
