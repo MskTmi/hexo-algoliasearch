@@ -1,6 +1,6 @@
 {
     "name": "@msktmi/hexo-algoliasearch",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A fixed and improved version of hexo-algoliasearch plugin.",
     "main": "index.js",
     "repository": {
