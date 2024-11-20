@@ -1,22 +1,23 @@
 {
-    "name": "hexo-algoliasearch",
-    "version": "2.0.1",
-    "description": "A plugin to index posts of your Hexo blog on Algolia",
+    "name": "@msktmi/hexo-algoliasearch",
+    "version": "1.0.0",
+    "description": "A fixed and improved version of hexo-algoliasearch plugin.",
     "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/MskTmi/hexo-algoliasearch"
+    },
+    "author": "MskTmi",
     "scripts": {
         "install-test-blog": "cd test_blog && npm install",
-        "build": "./node_modules/@babel/cli/bin/babel.js src --out-dir lib --ignore **/*.spec.js",
-        "lint": "./node_modules/.bin/eslint .",
-        "lint:fix": "./node_modules/.bin/eslint . --fix",
+        "build": "node node_modules/@babel/cli/bin/babel.js src --out-dir lib --ignore **/*.spec.js",
+        "lint": "node node_modules/.bin/eslint .",
+        "lint:fix": "node node_modules/.bin/eslint . --fix",
         "test": "npm run lint && jest",
         "test:update": "npm run lint && jest -u",
         "test:watch": "npm run test -- --watch",
         "test:coverage": "npm test --  --coverage",
         "prepublish": "npm run build"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/LouisBarranqueiro/hexo-algolia.git"
     },
     "keywords": [
         "hexo",
@@ -25,7 +26,6 @@
         "search",
         "plugin"
     ],
-    "author": "Louis Barranqueiro",
     "license": "MIT",
     "bugs": {
         "url": "https://github.com/LouisBarranqueiro/hexo-algoliasearch/issues"
